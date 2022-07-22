@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FruitEditComponent } from './fruit-edit/fruit-edit.component';
 import { FruitBasketComponent } from './fruit-basket/fruit-basket.component';
+import { ActiveItemDirective } from './active-item.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FruitEditComponent,
-    FruitBasketComponent
+    FruitBasketComponent,
+    ActiveItemDirective
   ],
   imports: [
     BrowserModule,
