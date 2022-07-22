@@ -4,3 +4,8 @@
 hr{
     color: blue;
 }
+h4{
+    color: coral;
+    font-weight: 600;
+    text-decoration: underline;
+}

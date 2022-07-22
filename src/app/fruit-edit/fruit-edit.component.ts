@@ -8,7 +8,7 @@ import { Fruit } from '../shared/fruit.model';
 export class FruitEditComponent implements OnInit {
   fruitName: string = '';
   fruitSize: string = 'small';
-  fruitWeight: number;
+  fruitWeight: string = '';
   fruit: Fruit;
   @Output() fruitEvent: EventEmitter<Fruit> = new EventEmitter<Fruit>();
 
@@ -18,8 +18,11 @@ export class FruitEditComponent implements OnInit {
   }
 
   onFruitAddClick() {
-    this.fruit = new Fruit(this.fruitName, this.fruitSize, this.fruitWeight);
+    this.fruit = new Fruit(this.fruitName, this.fruitSize, Number.parseFloat(this.fruitWeight));
+    this.fruitName = '';
+    this.fruitWeight = '';
     this.fruitEvent.emit(this.fruit);
+
   }
 
 

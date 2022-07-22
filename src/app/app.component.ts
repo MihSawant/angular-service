@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { Fruit } from './shared/fruit.model';
 
 @Component({
@@ -7,9 +7,10 @@ import { Fruit } from './shared/fruit.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  fruits: Fruit[] = [];
 
   onFruitAdded(fruit: Fruit) {
-    console.log(fruit);
+    this.fruits.push(fruit);
   }
 
 }

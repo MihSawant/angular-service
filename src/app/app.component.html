@@ -3,3 +3,10 @@
 </div>
 <hr>
 <app-fruit-edit (fruitEvent)="onFruitAdded($event)"></app-fruit-edit>
+<div class="my-3"></div>
+<div class="container">
+    <h4>Fruit Basket</h4>
+</div>
+<div class="container">
+    <app-fruit-basket *ngFor="let f of fruits" [fruit]="f"></app-fruit-basket>
+</div>

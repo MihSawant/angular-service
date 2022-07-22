@@ -1,4 +1,4 @@
 export class Fruit {
-    constructor(private fruitName: string, private fruitSize: string,
-        private fruitWeight: number) { }
+    constructor(public name: string, private size: string,
+        public weight: number) { }
 }
