@@ -1,0 +1,8 @@
+.container-md{
+    margin: 1.5rem;
+    background-color: grey;
+    padding: 1.2rem;
+}
+label{
+    font-weight: bolder;
+}

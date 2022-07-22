@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Fruit } from './shared/fruit.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fruits-app';
+
+  onFruitAdded(fruit: Fruit) {
+    console.log(fruit);
+  }
+
 }
+
