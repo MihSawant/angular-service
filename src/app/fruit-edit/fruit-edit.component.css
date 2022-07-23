@@ -1,6 +1,7 @@
 .container-md{
     background-color: grey;
     padding: 1.2rem;
+    border-radius: 20px;
 }
 label{
     font-weight: bolder;
