@@ -20,7 +20,7 @@ import { LoggingService } from './shared/logging.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [FruitStorageService, LoggingService],
+  // providers: [FruitStorageService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

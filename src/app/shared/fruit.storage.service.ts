@@ -2,7 +2,7 @@ import { EventEmitter, Injectable, OnInit } from "@angular/core";
 import { Fruit } from "./fruit.model";
 import { LoggingService } from "./logging.service";
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class FruitStorageService {
     fruits: Fruit[] = [];
     event = new EventEmitter<string>();
