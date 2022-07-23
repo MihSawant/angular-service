@@ -14,10 +14,12 @@ export class FruitEditComponent implements OnInit {
   fruitWeight: string = '';
   fruit: Fruit;
 
-  constructor(private logger: LoggingService
-    , private fruitStorage: FruitStorageService) { }
+  constructor(private fruitStorage: FruitStorageService) { }
 
   ngOnInit(): void {
+    this.fruitStorage.event.subscribe((event: string) => {
+      alert(event);
+    });
   }
 
   onFruitAddClick() {

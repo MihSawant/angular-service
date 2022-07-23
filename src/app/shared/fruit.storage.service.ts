@@ -1,11 +1,11 @@
-import { Injectable, OnInit } from "@angular/core";
+import { EventEmitter, Injectable, OnInit } from "@angular/core";
 import { Fruit } from "./fruit.model";
 import { LoggingService } from "./logging.service";
 
 @Injectable()
 export class FruitStorageService {
     fruits: Fruit[] = [];
-
+    event = new EventEmitter<string>();
 
     constructor(private logger: LoggingService) {
         this.fruits.push(new Fruit('Apple', 'medium', 15.62),
@@ -13,12 +13,17 @@ export class FruitStorageService {
     }
 
     addFruit(fruit: Fruit) {
+        this.event.emit('Fruit Added');
         this.fruits.push(fruit);
         this.logger.logFruitResult('Fruit :' + fruit.name + ' added');
         this.logger.logFruitResult('Basket Updated');
     }
 
+
+
     getAllFruits(): Fruit[] {
         return this.fruits;
     }
+
+
 }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Fruit } from '../shared/fruit.model';
+import { FruitStorageService } from '../shared/fruit.storage.service';
 import { LoggingService } from '../shared/logging.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class FruitBasketComponent implements OnInit {
   name: string;
   weight: number;
 
-  constructor(private logger: LoggingService) { }
+  constructor(private logger: LoggingService, private fruitStorage: FruitStorageService) {
+  }
 
   ngOnInit(): void {
     this.name = this.fruit.name;
