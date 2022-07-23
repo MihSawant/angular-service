@@ -6,7 +6,7 @@ import { LoggingService } from '../shared/logging.service';
   selector: 'app-fruit-edit',
   templateUrl: './fruit-edit.component.html',
   styleUrls: ['./fruit-edit.component.css'],
-  providers: [LoggingService]
+  // providers: [LoggingService]
 })
 export class FruitEditComponent implements OnInit {
   fruitName: string = '';
@@ -23,7 +23,6 @@ export class FruitEditComponent implements OnInit {
   onFruitAddClick() {
     this.fruit = new Fruit(this.fruitName, this.fruitSize, Number.parseFloat(this.fruitWeight));
     this.fruitStorage.addFruit(this.fruit);
-    this.logger.logFruitResult('Fruit ' + this.fruit.name + ' added');
     this.fruitName = '';
     this.fruitWeight = '';
   }

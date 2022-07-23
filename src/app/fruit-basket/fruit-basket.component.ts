@@ -6,7 +6,7 @@ import { LoggingService } from '../shared/logging.service';
   selector: 'app-fruit-basket',
   templateUrl: './fruit-basket.component.html',
   styleUrls: ['./fruit-basket.component.css'],
-  providers: [LoggingService]
+  // providers: [LoggingService]
 })
 export class FruitBasketComponent implements OnInit {
   @Input() fruit: Fruit;
@@ -18,7 +18,6 @@ export class FruitBasketComponent implements OnInit {
   ngOnInit(): void {
     this.name = this.fruit.name;
     this.weight = this.fruit.weight;
-    this.logger.logFruitResult('Fruit Basket Updated');
   }
 
 }
